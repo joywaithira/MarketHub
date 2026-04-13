@@ -39,6 +39,27 @@ fun AboutScreen(){
             },
 
 
+            actions = {
+                IconButton(
+                    onClick = {}) {
+                    Icon(
+                        imageVector = Icons.Default.ShoppingCart,
+                        contentDescription = "") }
+
+                IconButton(
+                    onClick = {}) {
+                    Icon(
+                        imageVector = Icons.Default.Notifications,
+                        contentDescription = "") }
+                IconButton(
+                    onClick = {}) {
+                    Icon(
+                        imageVector = Icons.Default.Share,
+                        contentDescription = "")}
+            },
+
+
+
             colors = TopAppBarDefaults.topAppBarColors(
                 containerColor = Borange,
                 navigationIconContentColor = Color.White,
@@ -46,10 +67,8 @@ fun AboutScreen(){
                 actionIconContentColor = Color.White,
             )
 
-
         )
-
-
+//End of TopAppBar
 
 
     }
@@ -62,7 +81,7 @@ fun AboutScreen(){
 @Composable
 fun AboutScreenPreview(){
 
-    AboutScreen()
+    AboutScreen(rememberNavController())
 
 
 }

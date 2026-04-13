@@ -27,10 +27,12 @@ import com.maryjoy.markethub.R
 import com.maryjoy.markethub.ui.theme.Borange
 
 @Composable
-fun OnBoardingScreen(){
+fun OnBoardingScreen(navController: NavController){
 
         Column(
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier
+                .fillMaxSize()
+                .paint(painter = painterResource(R.drawable.img), contentScale = ContentScale.FillBounds),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
@@ -83,7 +85,10 @@ fun OnBoardingScreen(){
 
 
             Button(
-                onClick = {},
+                onClick = {
+                    navController.navigate(ROUTE_Register)
+                },
+
                 colors = ButtonDefaults.buttonColors(Borange),
                 shape = RoundedCornerShape(10.dp),
                 modifier = Modifier.width(350.dp)
@@ -107,6 +112,6 @@ fun OnBoardingScreen(){
 @Composable
 fun OnBoardingScreenPreview(){
 
-    OnBoardingScreen()
+    OnBoardingScreen(rememberNavController())
 
 }
