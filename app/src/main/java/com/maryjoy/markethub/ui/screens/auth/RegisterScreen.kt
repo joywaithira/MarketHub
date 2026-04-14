@@ -1,6 +1,5 @@
 package com.maryjoy.markethub.ui.screens.auth
 
-import android.media.MediaRouter2
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -17,19 +16,15 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Person
-import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
-import androidx.compose.material3.TextField
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
-import androidx.compose.material3.TextField    ////////
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.key       //////
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -75,7 +70,7 @@ fun RegisterScreen(navController: NavController){
         Spacer(modifier = Modifier.width(10.dp))
 
         Image(
-            painter = painterResource(R.drawable.re),
+            painter = painterResource(R.drawable.`re.xml..........delete`),
             contentDescription = "product",
             modifier = Modifier.size(300.dp)
         )

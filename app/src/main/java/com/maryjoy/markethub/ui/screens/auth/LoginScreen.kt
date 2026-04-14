@@ -40,15 +40,15 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.maryjoy.markethub.R
-import com.maryjoy.markethub.ui.screens.navigation.ROUT_HOME
-import com.kennedy.markethub.navigation.ROUTE_Register
+import com.maryjoy.markethub.ui.navigation.ROUTE_Home
+import com.maryjoy.markethub.ui.navigation.ROUTE_Register
 
 import com.maryjoy.markethub.ui.theme.Borange
 
 @Composable
 fun LoginScreen(navController: NavController){
 
-    column(
+    Column(
 
         modifier = Modifier
             .paint(painter = painterResource(R.drawable.product), contentScale = ContentScale.FillBounds)

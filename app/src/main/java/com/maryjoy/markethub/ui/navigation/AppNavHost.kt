@@ -2,6 +2,7 @@ package com.maryjoy.markethub.ui.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -13,14 +14,16 @@ import com.maryjoy.markethub.ui.screens.home.HomeScreen
 import com.maryjoy.markethub.ui.screens.intent.IntentScreen
 import com.maryjoy.markethub.ui.screens.onboarding.OnBoardingScreen
 import com.maryjoy.markethub.ui.screens.payment.PaymentScreen
+import com.maryjoy.markethub.ui.screens.scaffold.ScaffoldScreen
 import com.maryjoy.markethub.ui.screens.service.ServiceScreen
+import com.maryjoy.markethub.ui.screens.splash.SplashScreen
 
 
 @Composable
 fun AppNavHost(
     modifier: Modifier = Modifier,
-    navController: NavController = rememberNavController(),
-    startDestination: String = ROUTE_ONBOARDING
+    navController: NavHostController = rememberNavController(),
+    startDestination: String = ROUTE_Splash
 
 ) {
 
@@ -42,18 +45,26 @@ fun AppNavHost(
             RegisterScreen(navController)
         }
         composable(ROUTE_OnBoarding) {
-            OnboardingScreen(navController)
+            OnBoardingScreen(navController)
         }
 
         composable(ROUTE_Payments) {
             PaymentScreen(navController)
         }
         composable(ROUTE_Service) {
-            ServiceSScreen(navController)
+            ServiceScreen(navController)
         }
 
         composable(ROUTE_Intent) {
             IntentScreen(navController)
+        }
+
+        composable(ROUTE_Splash) {
+            SplashScreen(navController)
+        }
+
+        composable(ROUTE_Scaffold) {
+            ScaffoldScreen(navController)
         }
 
 
@@ -63,3 +74,4 @@ fun AppNavHost(
 
     }
 }
+

@@ -27,7 +27,7 @@ fun PaymentScreen(navController: NavController){
 @Composable
 fun PaymentScreenPreview(){
 
-    PaymentScreen(rememberNavConntroller())
+    PaymentScreen(rememberNavController())
 
 
 }
